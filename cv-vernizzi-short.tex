@@ -11,7 +11,7 @@
 \newboolean{cvfull}
 \newboolean{cvpoli}
 
-\setboolean{cvit}{true}
+\setboolean{cvit}{false}
 \setboolean{cvaccademic}{false}
 \setboolean{cvfull}{false}
 \setboolean{cvpoli}{false}
@@ -69,7 +69,19 @@
 	\renewcommand{\refname}{Pubblicazioni (Selezione)}
 	\renewcommand{\misc}{Altre informazioni}
 }
-{ }
+{
+	\renewcommand{\summary}{Summary}
+	\renewcommand{\education}{Education}
+	\renewcommand{\experience}{Work experience}
+	\renewcommand{\teaching}{Attivit\`a didattica}
+	\renewcommand{\research}{Attivit\`a scientifica}
+	\renewcommand{\projects}{Partecipazione a progetti di ricerca}
+	\renewcommand{\languages}{Languages}
+	\renewcommand{\skills}{Competenze informatiche}
+	\renewcommand{\interests}{Interessi e attivit\`a}
+	\renewcommand{\refname}{Pubblicazioni (Selezione)}
+	\renewcommand{\misc}{Altre informazioni}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Settings for accademic CV
@@ -242,7 +254,6 @@ al mondo del lavoro i risultati della mia ricerca, o più in generale le mie com
 } %full
 
 \work {
-	\italian {
 %        
 %		\cventry{\textbf{dal 2010}}{Progetto personale}{sli-m.com, The \structure{sli}de \structure{m}achine \url{http://www.sli-m.com}~}{}{}{%
 %			Nel 2010, assieme ad un collega, ho iniziato il progetto \emph{sli-m.com},
@@ -250,17 +261,33 @@ al mondo del lavoro i risultati della mia ricerca, o più in generale le mie com
 %		}
 
 		% Inizio: 01/11/2011
+	\italian {
 		\cventry{\textbf{dal 2011}}{Sviluppatore}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
 			Sviluppo di web e mobile application nell'ambito del customer care.
             Integrazione e sviluppo di servizi business e corporate per conto di aziende di telecomunicazioni e provider di energia.
 		}
+    }
+    {
+		\cventry{\textbf{since 2011}}{Developer}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
+            Development of web and mobile applications for customer care.
+            Integration and development of enterprise services on behalf of telephone companies and energy providers.
+		}
+    }
 
+	\italian {
 		% Inizio: 01/07/2010
 		\cventry{\textbf{2010 -- 2011}}{Assegnista di ricerca}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
 			In seguito al conseguimento del dottorato, ho continuato la mia attivit\`a di ricerca al
 			Politecnico di Torino iniziando ad occuparmi di \emph{Cloud Computing}. 
+        }
 		}
+        {
+		\cventry{\textbf{2010 -- 2011}}{Assegnista di ricerca}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+            Following the Ph.D I continued my research activity at Politecnico di Torino, focusing on \emph{Cloud Computing}.
+        }
+        }
 
+	\italian {
 		% Inizio 01/07/2006
 		\cventry{\textbf{2006 -- 2010}}{Assegnista di ricerca}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
 			Attivit\`a di ricerca presso il Computer and Network Security Group.
