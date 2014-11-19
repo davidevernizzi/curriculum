@@ -1,0 +1,714 @@
+%%%
+%%% v0.1: sent to PCP
+%%%
+
+\documentclass[a4paper]{moderncv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% specifying options for CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{cvit}
+\newboolean{cvaccademic}
+\newboolean{cvfull}
+\newboolean{cvpoli}
+
+\setboolean{cvit}{false}
+\setboolean{cvaccademic}{false}
+\setboolean{cvfull}{false}
+\setboolean{cvpoli}{false}
+
+%\extendedversion{La versione estesa del CV \`e disponibile a \url{www.sli-m.com/vernizzi.pdf}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Misc includes and commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+
+\moderncvtheme[blue]{classic}
+
+\newcommand{\structure}[1]{\color{sectiontitlecolor}\textbf{#1}\color{black}}
+
+\newcommand{\summary}{Summary}
+\newcommand{\education}{Education}
+\newcommand{\experience}{Experience}
+\newcommand{\teaching}{Teaching}
+\newcommand{\research}{Scientific Activity}
+\newcommand{\projects}{Research Projects}
+\newcommand{\languages}{Languages}
+\newcommand{\skills}{Computer Skills}
+\newcommand{\interests}{Interests and Activities}
+\newcommand{\publications}{Publications (Selection)}
+\newcommand{\misc}{Other Information}
+
+\newcommand{\italian}[2]{\ifthenelse{\boolean{cvit}}{#1}{#2}}
+\newcommand{\accademic}[1]{\ifthenelse{\boolean{cvaccademic}}{#1}{}}
+\newcommand{\work}[1]{\ifthenelse{\boolean{cvaccademic}}{}{#1}}
+\newcommand{\full}[1]{\ifthenelse{\boolean{cvfull}}{#1}{}}
+\newcommand{\short}[1]{\ifthenelse{\boolean{cvfull}}{}{#1}}
+\newcommand{\poli}[2]{\ifthenelse{\boolean{cvpoli}}{#1}{#2}}
+
+\newcommand{\otc}{Open\_TC}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for italian language
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\italian{
+	\usepackage[italian]{babel}
+
+	\renewcommand{\summary}{Competenze ed interessi}
+	\renewcommand{\education}{Formazione}
+	\renewcommand{\experience}{Esperienze di lavoro}
+	\renewcommand{\teaching}{Attivit\`a didattica}
+	\renewcommand{\research}{Attivit\`a scientifica}
+	\renewcommand{\projects}{Partecipazione a progetti di ricerca}
+	\renewcommand{\languages}{Lingue}
+	\renewcommand{\skills}{Competenze informatiche}
+	\renewcommand{\interests}{Interessi e attivit\`a}
+	\renewcommand{\refname}{Pubblicazioni (Selezione)}
+	\renewcommand{\misc}{Altre informazioni}
+}
+{
+	\renewcommand{\summary}{Summary}
+	\renewcommand{\education}{Education}
+	\renewcommand{\experience}{Work experience}
+	\renewcommand{\teaching}{Attivit\`a didattica}
+	\renewcommand{\research}{Attivit\`a scientifica}
+	\renewcommand{\projects}{Research projects}
+	\renewcommand{\languages}{Languages}
+	\renewcommand{\skills}{Skills}
+	\renewcommand{\interests}{Interessi e attivit\`a}
+	\renewcommand{\refname}{Pubblicazioni (Selezione)}
+	\renewcommand{\misc}{Languages and other information}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for accademic CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\accademic{
+	\usepackage{multibib}
+	\italian{
+		\newcites{preprint,misc}{{Preprint},{Altro}}
+	}
+	{
+		\newcites{preprint,misc}{{Preprint},{Others}}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for work CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\work{
+	\nopagenumbers
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PERSONAL DATA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\firstname{Davide}
+\familyname{Vernizzi}
+\title{Curriculum Vit\ae}
+\italian{
+	\address{Via Belfiore, 42}{10125, Torino, Italia}
+}
+{
+	\address{Via Belfiore, 42}{10125, Torino, Italy}
+}
+\mobile{+39 329 24 73 484}
+\poli {
+	\phone{+39 011 2276 810}
+}
+{ }
+\poli {
+	\email{davide.vernizzi@polito.it}
+}
+{
+	\email{davide.vernizzi@gmail.com}
+}
+%\homepage{\url{www.sli-m.com}}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PUBBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\accademic{
+	\nocite{*}
+}
+
+\work{
+	\nocite{cabiddu10trusted,cesena10anonymous,chiariglione10proposal,avanzi08trace}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Competenze ed interessi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\work {
+	\vspace{-3.5em}  %%% Hack to fit in 2 pages
+
+	\italian{
+	\section{\summary}
+        Il mio principale campo di lavoro \`e lo sviluppo delle web applications e
+        dei backed e delle API utilizzate da App mobile.
+        
+        Negli ultimi anni il mio lavoro si \`e svolto principalmente presso 
+        Ennova srl, una startup del Politecnico di Torino che sviluppa soluzioni
+        per grandi realt\`a quali Telecom Italia, Vodafone, Enel ed Iren Energia.
+        Durante la mia collaborazione con Ennova mi sono occupato
+        di integrare e consolidare le basi dati dei clienti,
+        realizzare servizi a supporto degli IVR di Vodafone
+        e curare lo sviluppo di diverse App,
+        sia coordinando il lavoro degli sviluppatori,
+        sia sviluppando in prima persona le parti piu' critiche delle componenti server.
+
+        Prima di occuparmi di web e mobile application,
+        mi sono interessato della sicurezza dei sistemi informativi.
+		In questo contesto, ho iniziato ad occuparmi di \emph{Trusted Computing} in
+		seguito alla partecipazione al progetto europeo \otc, il cui scopo era
+		di sviluppare un framework open source che ne sfruttasse le potenzialit\`a.
+		In seguito alla conclusione del progetto \otc, ho iniziato ad occuparmi di \emph{Cloud Computing},
+		collaborando al progetto europeo
+		TClouds, che aveva come obiettivo lo sviluppo di una piattaforma di Cloud Computing
+		resiliente e privacy-enabled.
+
+        Per tutta la durata delle mie collaborazioni, sia al Politecnico di Torino, sia ad Ennova,
+        mi sono anche occupato di formare il personale attraverso tesi, tirocini accedemici e formazione
+        interna.
+	}
+	{ %english
+        I am currently working as a software engineer at Ennova Srl,
+        which was awarded with the prize of Italian Startup of Year 2014.
+
+        I develop web applications, backends, and APIs for mobile applications,
+        which are mainly used by telecommunication companies and energy providers,
+        such as Telecom Italia, Vodafone, Enel, and Iren Energia.
+
+        While working at Ennova, I have been in charge of integrating clients' databases,
+        I developed web services used by clients’ IVR,
+        and I coordinated the efforts of Ennova's developers in order to develop various mobile apps.
+        Moreover, I personally developed some of the most critical server side building blocks in many projects,
+        and I have helped to design Ennova's cloud computing architecture.
+
+        Before working on web and mobile applications, I obtained a Ph.D in security of computer systems.
+        In this context, I have participated in the European research project \otc,
+        aimed at creating an open-source framework for Trusted Computing.
+        Following this, I worked on security of cloud computing, contributing to the research project TClouds,
+        whose goal was to create a resilient and privacy-friendly cloud computing platform.
+
+        While holding my positions, both in university and in industry,
+        I have always been involved into the training of students or new employees.
+	} %english
+} %work
+\accademic {
+	Complete here.
+} %accademic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\education}
+\work {
+	%%% Dottorato - 15/04/2010
+	\italian{
+	\cventry{\textbf{15 aprile 2010}}{Dottorato in Ingegneria Informatica e dei Sistemi}{Politecnico di Torino}{}{}{%{XXII Ciclo}{}{%
+		Tesi: On Trusted and Privacy-Friendly Network Communications.\newline{}
+		Relatore: prof. Antonio Lioy.
+	}}{
+	\cventry{15 April 2010}{Ph.D. in  Computer Science}{Politecnico di Torino}{}{}{%
+		Thesis: On Trusted and Privacy-Friendly Network Communications.\newline{}
+		Advisor: prof. Antonio Lioy.
+	}}
+
+	%%% Laurea Poli - 04/05/2006
+	\italian{
+	\cventry{\textbf{5 maggio 2006}}{Laurea Specialistica in Ingegneria Informatica}{Politecnico di Torino}{}
+		%{}{
+		{\textit{104/110}}{%
+		Tesi: Self-adaptive parallel algorithms for computer vision applications.%(Algoritmi adattativi ed applicazioni alla computer vision).
+		\newline
+		Tesi svolta in collaborazione con l'\'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG).\newline{}
+		Relatori: prof. Bartrolomeo Montrucchio (POLITO), prof. Jean-Louis Roch (ENSIMAG).
+	}}{
+	\cventry{5 May 2006}{M.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{%
+		Thesis: Self-adaptive parallel algorithms for computer vision applications.
+		This thesis was written in collaboration with the \'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG).\newline{}
+		Advisors: prof. Bartrolomeo Montrucchio (POLITO), prof. Jean-Louis Roch (ENSIMAG).
+	}}
+
+	%%% Laurea ENSIMAG - 11/07/2005
+	\italian{
+	\cventry{\textbf{11 luglio 2005}}{Dipl\^ome d'Ing\'enieur
+		(Laurea Specialistica in Ingegneria Informatica)}
+		{\newline \'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG)}{}{}{%
+		Tesi: Self-adaptive parallel algorithms for computer vision applications.\newline
+		Relatore: prof. Jean-Louis Roch (ENSIMAG).
+	}}{
+	\cventry{11 July 2005}{Dipl\^ome d'Ing\'enieur (equivalent to M.Sc. in Computer Engineering)}{\'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG)}{}{}{%
+		Thesis: Self-adaptive parallel algorithms for computer vision applications.\newline{}
+		Advisor: prof. Jean-Louis Roch (ENSIMAG).
+	}}
+
+	% Laurea breve - 12/09/2003
+	\italian{
+	\cventry{\textbf{12 sett. 2003}\hfill}{Laurea in Ingegneria Informatica}{Politecnico di Torino}{}
+	%{}{
+	{\textit{104/110}}{%
+	}}{
+	\cventry{12 Sept. 2003}{B.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{%
+	}}
+} %work
+\accademic{
+	Complete here.
+} %accademic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% WORK EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\experience}
+
+\full{
+Le esperienze lavorative seguenti contribuiscono alla mia formazione e dimostrano la mia attitudine ad applicare 
+al mondo del lavoro i risultati della mia ricerca, o più in generale le mie competenze scientifiche.\\
+} %full
+
+\work {
+%        
+%		\cventry{\textbf{dal 2010}}{Progetto personale}{sli-m.com, The \structure{sli}de \structure{m}achine \url{http://www.sli-m.com}~}{}{}{%
+%			Nel 2010, assieme ad un collega, ho iniziato il progetto \emph{sli-m.com},
+%			un servizio web per la produzione e la gestione di presentazioni, basato sull'uso di mind map e \LaTeX/Beamer.
+%		}
+
+		% Inizio: 01/11/2011
+	\italian {
+		\cventry{\textbf{dal 2011}}{Sviluppatore}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
+			Sviluppo di web e mobile application nell'ambito del customer care.
+            Integrazione e sviluppo di servizi business e corporate per conto di aziende di telecomunicazioni e provider di energia.
+		}
+    }
+    { %english
+		\cventry{\textbf{since 2011}}{Developer}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
+            Development of web and mobile applications for customer care.
+            Integration and development of enterprise services on behalf of telephone companies and energy providers.
+		}
+    }
+
+	\italian {
+		% Inizio: 01/07/2010
+		\cventry{\textbf{2010 -- 2011}}{Assegnista di ricerca}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+			In seguito al conseguimento del dottorato, ho continuato la mia attivit\`a di ricerca al
+            Politecnico di Torino iniziando ad occuparmi di \emph{Cloud Computing}. 
+        }
+    }
+    { %english
+        \cventry{\textbf{2010 -- 2011}}{Postdoctoral researcher}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+            Following the Ph.D I continued my research activity at Politecnico di Torino, focusing on \emph{Cloud Computing}.
+        }
+    }
+
+	\italian {
+		% Inizio 01/07/2006
+		\cventry{\textbf{2006 -- 2010}}{Dottorando}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+			Attivit\`a di ricerca presso il Computer and Network Security Group.
+			L'ambito di ricerca ha riguardato principalmente il \emph{Trusted Computing} e le sue
+			applicazioni alle reti comunicazione. 
+			\full{
+				\`E stato studiato come utilizzare questa tecnologia
+				per rendere pi\`u sicure le comunicazioni di rete e ne sono state studiate le problematiche
+				collegate alla privacy. Questo lavoro \`e stato svolto principalmente all'interno del progetto
+				europe Open\_TC .
+			}
+			Questa attivit\`a mi ha portato al conseguimento del titolo di Dottore di ricerca.
+		}
+    }
+    { %english
+		\cventry{\textbf{2006 -- 2010}}{Research activity}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+            Research activity at Politecnico di Torino on security of computer systems and network.
+            The research activities were mainly focused to \emph{Trusted Computing} and its application
+            to network of computers, with a particular attention to privacy.
+        }
+    }
+		
+	\italian {
+		% Inizio XX/XX/2009
+		\cventry{\textbf{2009--2010}}{Collaboratore}{SmartRM S.r.l., \url{http://www.smartrm.com}~}{Torino}{}{%
+			Trasferimento tecnologico di 
+			parte delle conoscenze maturate durante l'attivit\`a di ricerca. 
+			\full{
+                In seguito a questa collaborazione \`e stata sviluppata la libreria \emph{Trusted Platform Agent} per lo sviluppo di applicationi
+                    che utilizzano \emph{Trusted Computing}.
+				I risultati di questo lavoro sono stati pubblicati
+				in un articolo scritto per la rivista scientifica \emph{IEEE Software} \cite{cabiddu11trusted}.
+				La consulenza, ha portato inoltre ad un contrivuto nella definizione dello 
+				standard ISO-MPEG Verify Device Protocol~\cite{chiariglione10proposal}.
+			}
+		}
+    }
+    { %english
+		\cventry{\textbf{2009--2010}}{Consultant}{SmartRM S.r.l., \url{http://www.smartrm.com}~}{Torino}{}{%
+            Consulting activity for SmartRM, a company specialized in developing encryption software
+            that allows users to easily protect and share digital content.
+            I helped SmartRM to integrate \emph{Trusted Computing} principles to content protection.
+        }
+    }
+
+	\italian {
+		% Inizio 30/06/2009
+		\cventry{\textbf{2006}}{Collaboratore}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
+			Sicurezza dei sistemi. Studio circa la possibilit\`a di adottare il protocollo
+			\emph{Direct Anonymous Attestation (DAA)} all'interno del protocollo TLS
+			effettuato per il progetto europeo \otc.
+		}
+    }
+
+    \italian {
+		% Inizio XX/03/2005
+		\cventry{\textbf{2005}}{Stage retribuito}{ID-IMAG, \url{http://bit.ly/id-imag}}{Grenoble, Francia}{}{%
+			Studio di nuove tecniche per la parallelizzazione, prove teoriche ed esperimenti pratici dei vantaggi introdotti.
+			Applicazione dei risultati a problemi di computer vision.
+		}
+    }
+    { %english
+		\cventry{\textbf{2005}}{Internship}{ID-IMAG, \url{http://bit.ly/id-imag}}{Grenoble, Francia}{}{%
+            Study and development of parallel algorithms used for computer vision.
+        }
+    }
+
+		% Inizio XX/06/2004
+		% Inizio XX/05/2003
+    \italian {
+		\cventry{\textbf{2003, 2004}}{Stage}{Dynamic Fun S.r.l., \url{http://www.dynamicfun.com/}~}{Torino}{}{%
+			Studio e sviluppo di algoritmi per il riconoscimento facciale.
+		}
+	} %italian
+    { %english
+		\cventry{\textbf{2003, 2004}}{Internship}{Dynamic Fun S.r.l., \url{http://www.dynamicfun.com/}~}{Torino}{}{%
+            Study and development of algorithms for face detection
+        }
+    }
+} %work
+% work
+
+
+\accademic{
+	\italian {
+	\section{\research}
+		Il mio principale campo di ricerca riguarda la sicurezza dei sistemi informativi.
+		In questo contesto, ho iniziato ad occuparmi di \emph{Trusted Computing} in
+		seguito alla mia partecipazione al progetto europeo \otc, il cui scopo era
+		quello di sviluppare un framework open source che sfruttasse le potenzialit\`a
+		offerte da questa tecnologia.
+
+		All'interno del progetto, ho concentrato il mio
+		lavoro di ricerca sulle comunicazioni di rete proponendo soluzioni che
+		sfruttassero il Trusted Computing per migliorarne la sicurezza. I risultati
+		di questo studio sono stati pubblicati in articoli scientifici che illustrano
+		come utilizzare il Trusted Computing nelle comunicazioni di rete client/server~\cite{armknecht08efficient},
+		alle comunicazioni broadcast~\cite{cesena08towards} e alle reti veicolari~\cite{vernizziXXbolstering}.
+
+		Una parte fondamentale della mia ricerca si \`e anche occupata di studiare gli
+		impatti che pu\`o avere il Trusted Computing sulla privacy. Il risultato di
+		questa seconda attivit\`a di ricerca \`e stata la proposta di uno schema
+		di \emph{autenticazione anonima} basato sui protocolli TLS e \emph{Direct Anonymous Attestation (DAA)},
+		pubblicato ad una conferenza scientifica~\cite{cesena10anonymous}.
+
+		% Un riassunto dei contributi principali su questi ambiti \`e disponibile nell'abstract della
+		% mia tesi di dottorato, disponibile a \url{xxx}.
+
+		Oltre all'attivit\`a di ricerca, ho contribuito al progetto partecipando
+		alla realizzazione dei dimostratori presentati alla Commissione Europea
+		durante le revisioni annuali, in particolare ho contribuito in maniera
+		assidua allo sviluppo del dimostratore del primo anno.
+		La collaborazione \`e poi continuata negli anni successivi partecipando % RIPETIZIONE
+		al design complessivo dell'architettura del framework sviluppato.
+
+		In seguito al progetto \otc, il mio lavoro di ricerca si \`e spostato sul cloud
+		computing.
+	} %italian
+	{ %english
+		Complete here.
+	} %english
+
+	\subsection{\projects}
+} %accademic
+\work{
+	\section{\projects}
+} %work
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% Descrione dei vari progetti di ricerca
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\italian {
+    \cventry{\textbf{2010-2011}}{TClouds (Trustworthy Clouds)}{}{}{\url{www.tclouds-project.eu} }{%
+        Sviluppo di una piattaforma di Cloud Computing resiliente e privacy-enabled.\newline{}
+        \full{Progetto finanziato da EC - DG/INFSO - FP7 (ICT-2009-257243).\newline{}}
+        \full{Periodo di svolgimento: ottobre 2010 - settembre 2013.}
+        \work{Principali partner: IBM, Philips, Ospedale San Raffaele (MI).} 
+    }
+}
+{ %english
+    \cventry{\textbf{2010-2011}}{TClouds (Trustworthy Clouds)}{}{}{\url{www.tclouds-project.eu} }{%
+        TClouds is EU-funded research project. Its main goal is to develop an advanced cloud infrastructure
+        that can deliver computing and storage that achieves a new level of security, privacy, and resilience.
+        \newline{}
+        \full{EC - DG/INFSO - FP7 (ICT-2009-257243).\newline{}}
+        \full{Periodo di svolgimento: ottobre 2010 - settembre 2013.}
+        \work{Main partners: IBM, Philips, University of Oxford.} 
+    }
+}
+
+	\full{
+		All'interno di questo progetto, iniziato il 1 ottobre 2010 e da considerarsi come il naturale proseguimento del progetto Open\_TC, 
+		mi occupo principalmente del coordinamento del \emph{WP 2.4: Architecture and Integrated Platform}, di cui il nostro gruppo è leader.
+		L'obiettivo del WP 2.4 è la definizione dell'architettura e la progettazione del framework che saranno utilizzati per
+		combinare i risultati di ricerca di altri workpackage, al fine di realizzare un prototipo integrato di infrastruttura di
+		Cloud Computing, su cui verranno dimostrate le applicazioni selezionate all'interno del progetto.\\
+		Partecipo inoltre ad altre attivit\`a in altri workpackage.
+		Come gruppo di ricerca, ci concentreremo su un sistema di logging e auditing volto a garantire la verificabilit\`a della configurazione del cloud, 
+		sia al momento dell'uso delle risorse (attestation), sia in tempi successivi (auditing, forensic), con controllo della disclosure dei dati
+		per proteggere la privacy degli attori coinvolti.
+		Più in dettaglio mi sto occupando della definizione di
+		un sistema di logging privacy-enabled ``by design'' e con funzionalit\`a di controllo d'accessi 
+		realizzate con tecniche di broadcast encryption (tema di un precedente lavoro~\cite{cesena08towards}).\\
+	} %full
+
+    \italian{
+        \cventry{\textbf{2010-2011}}{STORK (Secure Identity Across Borders Linked)}{}{}{\url{www.eid-stork.eu} }{%
+            Sviluppo di un sistema europeo interoperabile per l'autenticazione tramite eID.\newline{}
+            \full{Progetto finanziato da EC - DG/INFSO - CIP (ICT-PSP-2007-224993).\newline{}}
+            \full{Periodo di svolgimento: giugno 2008 - dicembre 2011.}
+            \work{Principali partner: 14 paesi membri dell'UE.}
+        }
+    }
+    { %english
+        \cventry{\textbf{2010-2011}}{STORK (Secure Identity Across Borders Linked)}{}{}{\url{www.eid-stork.eu} }{%
+            STORK project was funded by the European Commission as part of its Competitiveness and Innovation Programme. Its aim is to establish a European electronic ID Interoperability Platform that will allow citizens to use their national eID for authenticating and accessing electronic services across Europe.
+            \newline{}
+            \work{Main partners: 14 EU Member States.}
+        }
+    }
+
+	\full{
+		Il principale contributo a questo progetto è stata la realizzazione di una demo presentata ad ICT 2010, Bruxelles, Belgio.
+		La demo ha la finalit\`a di illustrare ad un cittadino europeo le potenzialit\`a del progetto STORK
+		e le nuove possibilit\`a da esso offerte per l'identificazione elettronica,
+		ed include un questionario per valutare l'interesse del cittadino verso questa tecnologia.
+		I cittadini europei potranno autenticarsi a servizi di nuova generazione,
+		come ad esempio l'European Citizen Action Service (ECAS),
+		utilizzando le proprie credenziali elettroniche (tipicamente carte d'identit\`a elettroniche).
+		Ho inoltre partecipato all'integrazione del servizio ECAS all'interno dell'infrastruttura italiana 
+		ed ho sviluppato dei moduli specifici per l'autenticazione di cittadini italiani tramite Carta Nazionale dei Servizi (CNS).
+		Questi moduli permettono principalmente di derivare attributi specifici da campi estratti dalle credenziali del cittadino,
+		ad esempio permettono di calcolare della data di nascita (e dunque l'et\`a) a partire dal codice fiscale.\\
+	} %full
+
+    \italian{
+    }
+    {
+        \cventry{\textbf{2009--2010}}{Trusted Platform Agent}{\url{http://goo.gl/mLodg4} }{}{}{%
+		C library (Linux, Windows) for application exploiting Trusted Computing and TPM.
+		}
+    }
+
+    \italian{
+        \cventry{\textbf{2007--2009}}{Open\_TC (Open Trusted Computing)}{}{}{\url{http://goo.gl/IDlKeB} }{%
+            Sviluppo di un framework per Trusted Computing, basato su software open source.\newline{}
+            \full{Progetto finanziato da EC - DG/INFSO - FP6 (IST-2004-027635).\newline{}}
+            \full{Periodo di svolgimento: novembre 2005 - aprile 2009.}
+            \work{Principali partner: IBM, HP, Infineon, AMD.}
+        }
+    }
+    {
+        \cventry{\textbf{2007--2009}}{Open\_TC (Open Trusted Computing)}{}{}{\url{http://goo.gl/IDlKeB} }{%
+            Development of a framework for Trusted Computing based on open source software.
+            \newline{}
+            \work{Main partners: IBM, HP, Infineon, AMD.}
+        }
+    }
+
+	\full{
+		All'interno del progetto mi sono occupato principalmente dello studio di aspetti
+		crittografici legati al Trusted Computing, in primis il protocollo Direct Anonymous Attestation (DAA).
+		Il risultato più significativo è stata la definizione di un'estensione al protocollo TLS per
+		l'autenticazione anonima attraverso DAA~\cite{cesena10anonymous},
+		corredata di implementazione e specifiche~\cite{cesena09ssl,cesena09openssl,cesena09openssla} 
+		che ne validano la fattibilit\`a tecnica.
+		Un altro risultato importante è stato la realizzazione della Trusted Platform Agent (TPA)~\cite{cabiddu10trusted},
+		una libreria open source per il Trusted Computing che semplifica l'interfaccia standardizzata dal 
+		Trusted Computing Group ed agevola lo sviluppo di applicazioni che fanno uso di questa tecnologia.
+		Ho collaborato infine ad alcune parti di modellazione di componenti del sistema Open\_TC, 
+		come ad esempio un sealing proxy~\cite{cesena08secure} per sopperire ad alcune limitazioni
+		della funzionalit\`a di sealing (bind crittografico di dati sensibili ad uno stato, o
+		configurazione, del sistema) standardizzata dal Trusted Computing Group.\\
+	} %full
+
+\accademic{
+	\subsection{Partecipazione a Scuole Nazionali e Internazionali COMPLETARE}
+
+	\cventry{2007}{Computer forensics, investigazione penale e criminalit\`a tecnologica. Aspetti informatico-giuridici}
+		{Universit\`a degli Studi di Milano}{Milano, Italia}{}
+		{Ciclo di seminari organizzato dalla Cattedra di Informatica Giuridica, Facolt\`a di Giurisprudenza.}
+	\cventry{XX/200X}{Second European Summer School on Trusted Infrastructure Technologies (ETISS)}{RUB}{Bochum, Germania}{}{}
+	\cventry{09/2007}{International School on Foundations of Security Analysis and Design (FOSAD)}{Universit\`a di Bologna}{Bertinoro (FC), Italia}{}{}
+	\cventry{09/2007}{International School on Foundations of Security Analysis and Design (FOSAD)}{Universit\`a di Bologna}{Bertinoro (FC), Italia}{}{}
+
+	\subsection{Revisione di Articoli Scientifici COMPLETARE}
+	\cvline{Conferenze}{CRISIS 2011 - \url{http://crisis2011.cs.upt.ro/}}
+	\cvline{Riviste}{IEEE XXX}
+
+} %accademic
+
+
+\accademic{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TEACHING EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\teaching}
+	\italian {
+		\full{
+			A partire dal primo anno del Dottorato di Ricerca ho svolto la seguente attivit\`a didattica.
+			Tale attivit\`a si \`e svolta sia presso il Politecnico di Torino (POLITO),
+			sia presso aziende esterne per corsi di formazione.\\
+		}
+		%
+		\cventry{\textbf{2009}}{Ingegneria del Software}{POLITO (ING4)}{esercitatore}{}{}
+		%
+		\cventry{\textbf{2009}}{Sicurezza delle reti ed applicazioni wireless}{POLITO (MASWI)}{docente}{}{}
+		%
+		\cventry{\textbf{2009}}{Sicurezza delle reti wireless}{POLITO (formazione professionale)}{docente}{}{}
+		%
+		\work{\cventry{\textbf{2009}}{Trusted Computing}{SmartRM (Torino)}{docente}{}{}}
+		%
+		\cventry{\textbf{2007, 2008}}{Fondamenti di Informatica}{POLITO (ING3)}{esercitatore}{}{}
+		%
+		\cventry{\textbf{2007}}{Security of computers systems}{Axis s.r.l. (Torino)}{docente}{}{}
+
+		\section{\languages}
+		\cvlanguage{Italiano}{\italian{Lingua madre}{Mother tongue}}{}
+		\cvlanguage{English}{}{\italian{Ottima padronanza sia parlato, sia scritto}{Fluent}}
+		\cvlanguage{Fran\c{c}ais}{\italian{Ottima conoscenza, sia parlato che scritto}{Fluent}}{}
+	} % italian
+	{
+		\full{
+			Starting from my first year as Ph.D. student I held the following teaching
+			activities, both as teacher assistant at Politecnico di Torino (POLITO) and
+			as teacher to private companies.
+		}
+		%
+		\cventry{\textbf{2009}}{Software engineering}{POLITO (ING4)}{teacher assistant}{}{}
+		%
+		\cventry{\textbf{2009}}{Wireless network security}{POLITO (MASWI)}{teacher}{}{}
+		%
+		\cventry{\textbf{2009}}{Wireless network security}{POLITO}{teacher}{}{}
+		%
+		\work{\cventry{\textbf{2009}}{Trusted Computing}{SmartRM (Torino)}{teacher}{}{}}
+		%
+		\cventry{\textbf{2007, 2008}}{Introduction to computer science}{POLITO (ING3)}{teacher assistant}{}{}
+		%
+		\cventry{\textbf{2007}}{Introduction to security of computer systems}{Axis s.r.l. (Torino)}{teacher}{}{}
+
+		\section{\languages}
+		\cvlanguage{Italiano}{\italian{Lingua madre}{Mother tongue}}{}
+		\cvlanguage{English}{}{\italian{Ottima padronanza sia parlato, sia scritto}{Fluent}}
+		\cvlanguage{Fran\c{c}ais}{\italian{Ottima conoscenza, sia parlato che scritto}{Fluent}}{}
+	} % english
+} % academic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TECH SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\skills}
+
+\work{
+	\italian {
+		\cvcomputer{OS}{Linux, Mac OS X, Windows}{Altro}{MySQL, git, UML, \LaTeX, Office}
+		\cvcomputer{Programmazione}{PHP, C, Java, Python, Ruby}{Web}{PHP, Javascript, HTML, CSS}
+		\cvcomputer{Cloud}{Amazon AWS}{}{}
+
+\full{
+		\cventry{Libreria sviluppata}{Trusted Platform Agent}{\url{http://security.polito.it/tc/tpa} }{}{}{%
+		Libreria C (Linux, Windows) per applicazioni che usano Trusted Computing e TPM.
+		}
+
+		\cventry{Libreria sviluppata}{DAA Toolkit}{\url{http://security.polito.it/tc/daa} }{}{}{%
+		Patch ad OpenSSL per autenticazione anonima con TLS e DAA.
+		}
+
+		\cventry{Web}{sli-m.com: The \structure{sli}de \structure{m}achine}{\url{http://sli-m.com} }{}{}{%
+		Servizio web per la produzione e la gestione di presentazioni, basato su mind map e \LaTeX/Beamer.
+		}
+}
+	} %italian
+	{ %english
+		\cvcomputer{OS}{Linux, Mac OS X, Windows}{Altro}{MySQL, UML, Vim, \LaTeX, Office}
+		\cvcomputer{Programming}{C, Java, Python}{Web}{PHP, Javascript, HTML, CSS}	
+
+		%\cventry{Programming library}{DAA Toolkit}{\url{http://security.polito.it/tc/daa} }{}{}{%
+		%Patch for OpenSSL for anonymous authentication using TLS and DAA.
+		%}
+
+		%\cventry{Web}{sli-m.com: The \structure{sli}de \structure{m}achine}{\url{http://sli-m.com}}{}{}{%
+		%Web service for making presentation basing on mind maps and \LaTeX/Beamer.
+		%}
+	} %english
+} % work
+
+
+\work{
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{\misc}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\italian{
+		\cvline{\textbf{Lingue}}{Ottima padronanza di inglese e francese, sia parlato sia scritto.}
+		\cvline{\textbf{Didattica}}{Attivit\`a didattica al Politecnico di Torino in qualit\`a di assistente del docente
+						e presso aziende private in qualit\`a di docente.}
+	} % italian
+	{
+		\cvline{\textbf{Languages}}{Native language: Italian. Fluent in English and French.}
+		\cvline{\textbf{Teaching}}{Teaching at Politecnico di Torino as teacher assistant and teaching to private companies as teacher.}
+	} % english
+} % work
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\accademic{
+\section{Produzione Scientifica}
+\renewcommand{\refname}{Pubblicazioni}
+\bibliographystyle{abbrvurl}
+\bibliography{vernizzi}
+\nocitepreprint{avanzi08pairing}
+\bibliographystylepreprint{abbrvurl}
+\bibliographypreprint{vernizzi-extra}
+\nocitemisc{chiariglione10proposal,cesena09pairing,elkalam09toward,cesena09ssl,cesena09openssl,cesena09openssla}
+\bibliographystylemisc{abbrvurl}
+\bibliographymisc{vernizzi-extra}
+} %accademic
+
+\accademic{
+\bibliographystyle{abbrvurl}
+\bibliography{vernizzi,vernizzi-extra}
+}
+
+\accademic{
+\ \\\ \\
+Torino, \today
+\flushright
+Davide VERNIZZI\hspace*{1cm}
+} % accademic
+
+%\vfill
+%\hfill Torino, 3/12/2012
+%\begin{figure}
+%\hfill
+%\includegraphics[width=0.4\textwidth]{FirmaPenna}
+%\end{figure}
+
+
+\end{document}
+
