@@ -169,22 +169,34 @@
 \work {
     % Inizio: 01/11/2011
 		\cventry{\textbf{since 2011}}{Developer}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
-            Development of web and mobile applications for customer care.
-            Integration and development of enterprise services on behalf of telephone companies and energy providers.
+While working at Ennova, I have been in charge of managing some of its projects.
+In this context I kept contacts with the customers, designed the solutions and wrote part of the code.
+The development tasks include integrating clients’ databases, developing web
+services used by clients’ IVR and API used by various mobile apps.
+\\%
+Beside project-specific tasks, I also contributed to designing and building
+Ennova's cloud architecture -- which is based on Amazon AWS -- and to traing new employees.
 		}
 
         \cventry{\textbf{2010 -- 2011}}{Postdoctoral researcher}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
             Following the Ph.D I continued my research activity at Politecnico di Torino, focusing on \emph{Cloud Computing}.
+            In particular I joined TClouds, an EU-funded research project. The main goal of TClouds is to develop an advanced cloud infrastructure that can deliver computing and storage that achieves a new level of security, privacy, and resilience.
+            I coordinated the efforts of Politecnico di Torino's group within TClouds. My research group studied how cloud computing affects security of logs. We proposed solutions to enhance the security of logs in clouds and we implemented a library that implements these proposal. Moreover, we integrated this concepts into OpenStack
         }
 
 		\cventry{\textbf{2006 -- 2010}}{Research activity}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
-            Research activity at Politecnico di Torino on security of computer systems and network.
-            The research activities were mainly focused to \emph{Trusted Computing} and its application
-            to network of computers, with a particular attention to privacy.
+I studied the possibility to use Trusted Computing techniques to increase privacy in secure network communication.
+In particular I used standard TLS extension to carry integrity measurements within the standard TLS handshake.
+The result of such an enhanced handshake is called trusted channel.
+This idea is described in many scientific papers and is used as ground for other publications.
+I also provided an open source implementation of an efficient trusted channel which is based on the OpenSSL library.
+%            Research activity at Politecnico di Torino on security of computer systems and network.
+%            The research activities were mainly focused to \emph{Trusted Computing} and its application
+%            to network of computers, with a particular attention to privacy.
         }
 		
 		\cventry{\textbf{2009--2010}}{Consultant}{SmartRM S.r.l., \url{http://www.smartrm.com}~}{Torino}{}{%
-            Consulting activity for SmartRM, a company specialized in developing encryption software
+            I did consulting for SmartRM, a company specialized in developing encryption software
             that allows users to easily protect and share digital content.
             I helped SmartRM to integrate \emph{Trusted Computing} principles to content protection.
         }
@@ -205,8 +217,14 @@
 } %work
 % work
 
-
 \work{
+\iffalse
+
+\section{Industry projects}
+\cventry{\textbf{2014}}{clickiren}{}{}{\url{clickiren.gruppoiren.it} }{%
+    xxx
+}
+
 	\section{\projects}
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,14 +253,15 @@
             \newline{}
             \work{Main partners: IBM, HP, Infineon, AMD.}
         }
+        \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% TECH SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\skills}
 
-		\cvcomputer{OS}{Linux, Mac OS X, Windows}{Altro}{MySQL, UML, Vim, \LaTeX, Office}
-		\cvcomputer{Programming}{C, Java, Python}{Web}{PHP, Javascript, HTML, CSS}	
+\cvcomputer{Programming}{PHP, MySql, Javascript, HTML, CSS, C, Java, Python} {OS}{Linux, Mac OS X, Windows} 
+\cvcomputer{Misc}{Amazon Web Services, Cryptography and computer security, UML, Vim, \LaTeX, Office}{}{}
 
 		%\cventry{Programming library}{DAA Toolkit}{\url{http://security.polito.it/tc/daa} }{}{}{%
 		%Patch for OpenSSL for anonymous authentication using TLS and DAA.
