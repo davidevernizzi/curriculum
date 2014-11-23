@@ -2,7 +2,8 @@
 %%% v0.1: sent to PCP
 %%%
 
-\documentclass[a4paper]{moderncv}
+%\documentclass[a4paper]{moderncv}
+\documentclass[a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% specifying options for CV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,7 +27,15 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+%\usepackage[cm]{fullpage}
+\usepackage[margin=1.4in]{geometry}
+
+\usepackage[document]{ragged2e}
+
+
 \moderncvtheme[blue]{classic}
+%\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+%\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \newcommand{\structure}[1]{\color{sectiontitlecolor}\textbf{#1}\color{black}}
 
@@ -55,39 +64,39 @@
 %%% Settings for italian language
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \italian{
-	\usepackage[italian]{babel}
+    \usepackage[italian]{babel}
 
-	\renewcommand{\summary}{Competenze ed interessi}
-	\renewcommand{\education}{Formazione}
-	\renewcommand{\experience}{Esperienze di lavoro}
-	\renewcommand{\teaching}{Attivit\`a didattica}
-	\renewcommand{\research}{Attivit\`a scientifica}
-	\renewcommand{\projects}{Partecipazione a progetti di ricerca}
-	\renewcommand{\languages}{Lingue}
-	\renewcommand{\skills}{Competenze informatiche}
-	\renewcommand{\interests}{Interessi e attivit\`a}
-	\renewcommand{\refname}{Pubblicazioni (Selezione)}
-	\renewcommand{\misc}{Altre informazioni}
+    \renewcommand{\summary}{Competenze ed interessi}
+    \renewcommand{\education}{Formazione}
+    \renewcommand{\experience}{Esperienze di lavoro}
+    \renewcommand{\teaching}{Attivit\`a didattica}
+    \renewcommand{\research}{Attivit\`a scientifica}
+    \renewcommand{\projects}{Partecipazione a progetti di ricerca}
+    \renewcommand{\languages}{Lingue}
+    \renewcommand{\skills}{Competenze informatiche}
+    \renewcommand{\interests}{Interessi e attivit\`a}
+    \renewcommand{\refname}{Pubblicazioni (Selezione)}
+    \renewcommand{\misc}{Altre informazioni}
 }
 {
-	\renewcommand{\summary}{Summary}
-	\renewcommand{\education}{Education}
-	\renewcommand{\experience}{Work experience}
-	\renewcommand{\teaching}{Attivit\`a didattica}
-	\renewcommand{\research}{Attivit\`a scientifica}
-	\renewcommand{\projects}{Research projects}
-	\renewcommand{\languages}{Languages}
-	\renewcommand{\skills}{Skills}
-	\renewcommand{\interests}{Interessi e attivit\`a}
-	\renewcommand{\refname}{Pubblicazioni (Selezione)}
-	\renewcommand{\misc}{Languages and other information}
+    \renewcommand{\summary}{Summary}
+    \renewcommand{\education}{Education}
+    \renewcommand{\experience}{Work experience}
+    \renewcommand{\teaching}{Attivit\`a didattica}
+    \renewcommand{\research}{Attivit\`a scientifica}
+    \renewcommand{\projects}{Research projects}
+    \renewcommand{\languages}{Languages}
+    \renewcommand{\skills}{Skills}
+    \renewcommand{\interests}{Interessi e attivit\`a}
+    \renewcommand{\refname}{Pubblicazioni (Selezione)}
+    \renewcommand{\misc}{Languages and other information}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Settings for work CV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \work{
-	\nopagenumbers
+    \nopagenumbers
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,6 +108,7 @@
 \address{Via Belfiore, 42}{10125, Turin, Italy}
 \mobile{+39 329 24 73 484}
 \email{davide.vernizzi@gmail.com}
+\extrainfo{Born 23 November 1981}
 %\homepage{\url{www.sli-m.com}}
 
 \begin{document}
@@ -107,191 +117,239 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Competenze ed interessi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\work {
 %	\vspace{-3.5em}  %%% Hack to fit in 2 pages
+\justify
+I am currently working as a software engineer at Ennova Srl,
+  which was awarded with the prize of Italian Startup of the Year 2014.
 
-        I am currently working as a software engineer at Ennova Srl,
-        which was awarded with the prize of Italian Startup of Year 2014.
+  I develop web applications, backends, and APIs for mobile applications,
+  which are mainly used by telecommunication companies and energy providers,
+  such as Telecom Italia, Vodafone, Enel, and Iren Energia.
 
-        I develop web applications, backends, and APIs for mobile applications,
-        which are mainly used by telecommunication companies and energy providers,
-        such as Telecom Italia, Vodafone, Enel, and Iren Energia.
+  While working at Ennova, I have been in charge of integrating clients' databases,
+  I developed web services used by clients’ IVR,
+  and I coordinated the efforts in order to create various mobile apps.
+  Moreover, I personally wrote some of the most critical server side building blocks in many projects,
+  and I have helped to design Ennova's cloud computing architecture.
 
-        While working at Ennova, I have been in charge of integrating clients' databases,
-        I developed web services used by clients’ IVR,
-        and I coordinated the efforts of Ennova's developers in order to develop various mobile apps.
-        Moreover, I personally developed some of the most critical server side building blocks in many projects,
-        and I have helped to design Ennova's cloud computing architecture.
+  Before working on web and mobile applications, I obtained a Ph.D in security of computer systems.
+  In this context, I have participated in the European research project \otc,
+  aimed at creating an open-source framework for Trusted Computing.
+  Afterwards, I worked on security of cloud computing, contributing to the research project TClouds,
+  whose goal was to create a resilient and privacy-friendly cloud computing platform.
 
-        Before working on web and mobile applications, I obtained a Ph.D in security of computer systems.
-        In this context, I have participated in the European research project \otc,
-        aimed at creating an open-source framework for Trusted Computing.
-        Following this, I worked on security of cloud computing, contributing to the research project TClouds,
-        whose goal was to create a resilient and privacy-friendly cloud computing platform.
+  While holding my positions, both in university and in industry,
+  I have always been involved into the training of students or new employees.
 
-        While holding my positions, both in university and in industry,
-        I have always been involved into the training of students or new employees.
-} %work
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%% WORK EXPERIENCE
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{\experience}
+
+  % Inizio: 01/11/2011
+  \cventry{\textbf{since 2011}}{Developer}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
+  \justify
+  At Ennova, I work as project manager and software engineer.
+  In this context I keep contacts with the customers, design solutions and write part of the code.
+  The development tasks include integrating clients’ databases, developing web
+  services used by clients’ IVR and API used by various mobile apps.
+  \\%
+  Beside project-specific tasks, I have also contributed to design and build
+  Ennova's cloud architecture -- which is based on Amazon AWS -- and to train new employees.
+  }
+
+\cventry{\textbf{2010 -- 2011}}{Postdoctoral researcher}{Politecnico di Torino, Computer Security Group}{}{}{%
+  \justify
+    Following the Ph.D I continued my research activity at Politecnico di Torino, focusing on \emph{Cloud Computing}.
+        In particular I joined TClouds, an European research project.
+        The main goal of TClouds is to develop an advanced cloud infrastructure that can deliver
+        computing and storage that achieves a new level of security, privacy, and resilience.
+        I coordinated the efforts of Politecnico di Torino's group within TClouds.
+        My research group studied how cloud computing affects security of logs.
+        We proposed solutions to enhance the security of logs in clouds and we implemented these proposals in a library.
+        Moreover, we integrated this concepts into OpenStack
+}
+
+\cventry{\textbf{2006 -- 2010}}{Research activity}{Politecnico di Torino, Computer Security Group}{}{}{%
+  \justify
+    I studied the possibility to use Trusted Computing techniques to increase privacy in secure network communication.
+        In particular I used standard TLS extension to carry integrity measurements within the standard TLS handshake.
+        The result of such an enhanced handshake is called trusted channel.
+        This idea is described in many scientific papers and is used as ground for other publications.
+        I also provided an open source implementation of an efficient trusted channel which is based on the OpenSSL library.
+}
+
+%		\cventry{\textbf{2009--2010}}{Consultant}{SmartRM S.r.l., \url{http://www.smartrm.com}~}{Torino}{}{%
+%  \justify
+%            I did consulting for SmartRM, a company specialized in developing encryption software
+%            that allows users to easily protect and share digital content.
+%            I helped SmartRM to integrate \emph{Trusted Computing} principles to content protection.
+%        }
+
+\cventry{\textbf{since 2003}}{Consultant and teacher}{}{}{}{%
+  \justify
+    I took part as a consultant in many different projects, including security, cryptographic libraries 
+        and web applications. Furthermore, I have taught at Politecnico di Torino as teacher assistant
+        and for professional developing in the field of security.
+}
+
+%\cventry{\textbf{2005}}{Internship}{ID-IMAG, \url{http://bit.ly/id-imag}}{Grenoble, Francia}{}{%
+%    Study and development of parallel algorithms used for computer vision.
+%}
+
+% Inizio XX/06/2004
+% Inizio XX/05/2003
+%\cventry{\textbf{2003, 2004}}{Internship}{Dynamic Fun S.r.l., \url{http://www.dynamicfun.com/}~}{Torino}{}{%
+%    Study and development of algorithms for face detection
+%}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\education}
-\work {
-	%%% Dottorato - 15/04/2010
-	\cventry{15 April 2010}{Ph.D. in  Computer Science}{Politecnico di Torino}{}{}{%
-		Thesis: On Trusted and Privacy-Friendly Network Communications.\newline{}
-		Advisor: prof. Antonio Lioy.
-	}
-
-	%%% Laurea Poli - 04/05/2006
-	\cventry{5 May 2006}{M.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{%
-		Thesis: Self-adaptive parallel algorithms for computer vision applications.
-		This thesis was written in collaboration with the \'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG).\newline{}
-		Advisors: prof. Bartrolomeo Montrucchio (POLITO), prof. Jean-Louis Roch (ENSIMAG).
-	}
-
-	%%% Laurea ENSIMAG - 11/07/2005
-	\cventry{11 July 2005}{Dipl\^ome d'Ing\'enieur (equivalent to M.Sc. in Computer Engineering)}{\'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG)}{}{}{%
-		Thesis: Self-adaptive parallel algorithms for computer vision applications.\newline{}
-		Advisor: prof. Jean-Louis Roch (ENSIMAG).
-	}
-
-	% Laurea breve - 12/09/2003
-	%\cventry{12 Sept. 2003}{B.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{% }
-} %work
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% WORK EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\experience}
-
-\work {
-    % Inizio: 01/11/2011
-		\cventry{\textbf{since 2011}}{Developer}{Ennova s.r.l, \url{http://www.ennova.it/}}{}{}{%
-While working at Ennova, I have been in charge of managing some of its projects.
-In this context I kept contacts with the customers, designed the solutions and wrote part of the code.
-The development tasks include integrating clients’ databases, developing web
-services used by clients’ IVR and API used by various mobile apps.
-\\%
-Beside project-specific tasks, I also contributed to designing and building
-Ennova's cloud architecture -- which is based on Amazon AWS -- and to traing new employees.
-		}
-
-        \cventry{\textbf{2010 -- 2011}}{Postdoctoral researcher}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
-            Following the Ph.D I continued my research activity at Politecnico di Torino, focusing on \emph{Cloud Computing}.
-            In particular I joined TClouds, an EU-funded research project. The main goal of TClouds is to develop an advanced cloud infrastructure that can deliver computing and storage that achieves a new level of security, privacy, and resilience.
-            I coordinated the efforts of Politecnico di Torino's group within TClouds. My research group studied how cloud computing affects security of logs. We proposed solutions to enhance the security of logs in clouds and we implemented a library that implements these proposal. Moreover, we integrated this concepts into OpenStack
-        }
-
-		\cventry{\textbf{2006 -- 2010}}{Research activity}{Politecnico di Torino, Dip. di Automatica e Informatica}{}{}{%
-I studied the possibility to use Trusted Computing techniques to increase privacy in secure network communication.
-In particular I used standard TLS extension to carry integrity measurements within the standard TLS handshake.
-The result of such an enhanced handshake is called trusted channel.
-This idea is described in many scientific papers and is used as ground for other publications.
-I also provided an open source implementation of an efficient trusted channel which is based on the OpenSSL library.
-%            Research activity at Politecnico di Torino on security of computer systems and network.
-%            The research activities were mainly focused to \emph{Trusted Computing} and its application
-%            to network of computers, with a particular attention to privacy.
-        }
-		
-		\cventry{\textbf{2009--2010}}{Consultant}{SmartRM S.r.l., \url{http://www.smartrm.com}~}{Torino}{}{%
-            I did consulting for SmartRM, a company specialized in developing encryption software
-            that allows users to easily protect and share digital content.
-            I helped SmartRM to integrate \emph{Trusted Computing} principles to content protection.
-        }
-
-		\cventry{\textbf{since 2003}}{Consultant}{}{}{}{%
-            I did consulting for many different projects.
-        }
-
-		%\cventry{\textbf{2005}}{Internship}{ID-IMAG, \url{http://bit.ly/id-imag}}{Grenoble, Francia}{}{%
-        %    Study and development of parallel algorithms used for computer vision.
-        %}
-
-		% Inizio XX/06/2004
-		% Inizio XX/05/2003
-		%\cventry{\textbf{2003, 2004}}{Internship}{Dynamic Fun S.r.l., \url{http://www.dynamicfun.com/}~}{Torino}{}{%
-        %    Study and development of algorithms for face detection
-        %}
-} %work
-% work
-
-\work{
-\iffalse
-
-\section{Industry projects}
-\cventry{\textbf{2014}}{clickiren}{}{}{\url{clickiren.gruppoiren.it} }{%
-    xxx
-}
-
-	\section{\projects}
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%%% Descrione dei vari progetti di ricerca
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \cventry{\textbf{2010-2011}}{TClouds (Trustworthy Clouds)}{}{}{\url{www.tclouds-project.eu} }{%
-        TClouds is EU-funded research project. Its main goal is to develop an advanced cloud infrastructure
-        that can deliver computing and storage that achieves a new level of security, privacy, and resilience.
-        \newline{}
-%        \full{EC - DG/INFSO - FP7 (ICT-2009-257243).\newline{}}
-        \work{Main partners: IBM, Philips, University of Oxford.} 
-    }
-
-        \cventry{\textbf{2010-2011}}{STORK (Secure Identity Across Borders Linked)}{}{}{\url{www.eid-stork.eu} }{%
-            STORK project was funded by the European Commission as part of its Competitiveness and Innovation Programme. Its aim is to establish a European electronic ID Interoperability Platform that will allow citizens to use their national eID for authenticating and accessing electronic services across Europe.
+    %%% Dottorato - 15/04/2010
+        \cventry{15 April 2010}{Ph.D. in  Computer Science}{Politecnico di Torino}{}{}{%
+            Thesis: On Trusted and Privacy-Friendly Network Communications.
             \newline{}
-            \work{Main partners: 14 EU Member States.}
+            Advisor: Prof. Antonio Lioy.
         }
 
-%        \cventry{\textbf{2009--2010}}{Trusted Platform Agent}{\url{http://goo.gl/mLodg4} }{}{}{%
-%		C library (Linux, Windows) for application exploiting Trusted Computing and TPM.
-%		}
-
-        \cventry{\textbf{2007--2009}}{Open\_TC (Open Trusted Computing)}{}{}{\url{http://goo.gl/IDlKeB} }{%
-            Development of a framework for Trusted Computing based on open source software.
+    %%% Laurea Poli - 04/05/2006
+        \cventry{5 May 2006}{M.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{%
+        \justify 
+            Thesis: Self-adaptive parallel algorithms for computer vision applications.
+            This thesis was written in collaboration with the \'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG).
             \newline{}
-            \work{Main partners: IBM, HP, Infineon, AMD.}
+            Advisors: Prof. Bartrolomeo Montrucchio (POLITO), Prof. Jean-Louis Roch (ENSIMAG).
         }
-        \fi
+
+        %%% Laurea ENSIMAG - 11/07/2005
+            \cventry{11 July 2005}{Dipl\^ome d'Ing\'enieur (equivalent to M.Sc. in Computer Engineering)}{\'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble (ENSIMAG)}{}{}{%
+            \justify
+            Thesis: Self-adaptive parallel algorithms for computer vision applications.\newline{}
+            Advisor: Prof. Jean-Louis Roch (ENSIMAG).
+        }
+
+        % Laurea breve - 12/09/2003
+            %\cventry{12 Sept. 2003}{B.Sc. in Computer Engineering}{Politecnico di Torino}{}{}{%{\textit{104/110}}{% }
+
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            %%% PROJECTS
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            \work{
+                \iffalse
+
+                    \section{Industry projects}
+                \cventry{\textbf{2014}}{clickiren}{}{}{\url{clickiren.gruppoiren.it} }{%
+                    xxx
+                }
+
+                \section{\projects}
+
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%% Descrione dei vari progetti di ricerca
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    \cventry{\textbf{2010-2011}}{TClouds (Trustworthy Clouds)}{}{}{\url{www.tclouds-project.eu} }{%
+                        TClouds is EU-funded research project. Its main goal is to develop an advanced cloud infrastructure
+                            that can deliver computing and storage that achieves a new level of security, privacy, and resilience.
+                            \newline{}
+                        %        \full{EC - DG/INFSO - FP7 (ICT-2009-257243).\newline{}}
+                        \work{Main partners: IBM, Philips, University of Oxford.} 
+                    }
+
+                \cventry{\textbf{2010-2011}}{STORK (Secure Identity Across Borders Linked)}{}{}{\url{www.eid-stork.eu} }{%
+                    STORK project was funded by the European Commission as part of its Competitiveness and Innovation Programme. Its aim is to establish a European electronic ID Interoperability Platform that will allow citizens to use their national eID for authenticating and accessing electronic services across Europe.
+                        \newline{}
+                    \work{Main partners: 14 EU Member States.}
+                }
+
+                %        \cventry{\textbf{2009--2010}}{Trusted Platform Agent}{\url{http://goo.gl/mLodg4} }{}{}{%
+                    %		C library (Linux, Windows) for application exploiting Trusted Computing and TPM.
+                    %		}
+
+                \cventry{\textbf{2007--2009}}{Open\_TC (Open Trusted Computing)}{}{}{\url{http://goo.gl/IDlKeB} }{%
+                    Development of a framework for Trusted Computing based on open source software.
+                    \newline{}
+                \work{Main partners: IBM, HP, Infineon, AMD.}
+            }
+            \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% TECH SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\skills}
 
-\cvcomputer{Programming}{PHP, MySql, Javascript, HTML, CSS, C, Java, Python} {OS}{Linux, Mac OS X, Windows} 
-\cvcomputer{Misc}{Amazon Web Services, Cryptography and computer security, UML, Vim, \LaTeX, Office}{}{}
+    \cvcomputer{Programming}{\justify PHP, MySql, Javascript, HTML, CSS, C, Java, Python} {OS}{Linux, Mac OS X, Windows} 
+    \cvcomputer{Misc}{\justify Amazon Web Services, Cryptography and computer security, UML, Vim, \LaTeX, Office}{}{}
 
-		%\cventry{Programming library}{DAA Toolkit}{\url{http://security.polito.it/tc/daa} }{}{}{%
-		%Patch for OpenSSL for anonymous authentication using TLS and DAA.
-		%}
+            %\cventry{Programming library}{DAA Toolkit}{\url{http://security.polito.it/tc/daa} }{}{}{%
+                %Patch for OpenSSL for anonymous authentication using TLS and DAA.
+                %}
 
-		%\cventry{Web}{sli-m.com: The \structure{sli}de \structure{m}achine}{\url{http://sli-m.com}}{}{}{%
-		%Web service for making presentation basing on mind maps and \LaTeX/Beamer.
-		%}
-} % work
-
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\section{\misc}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\cvline{\textbf{Languages}}{Native language: Italian. Fluent in English and French.}
-		\cvline{\textbf{Teaching}}{Teaching at Politecnico di Torino as teacher assistant and teaching to private companies as teacher.}
-
+            %\cventry{Web}{sli-m.com: The \structure{sli}de \structure{m}achine}{\url{http://sli-m.com}}{}{}{%
+                %Web service for making presentation basing on mind maps and \LaTeX/Beamer.
+                %}
+            } % work
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+%%% MISC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\misc}
+    \cvline{\textbf{Languages}}{Native language: Italian. Fluent in English and French.}
+%    \cvline{\textbf{Teaching}}{Teaching at Politecnico di Torino as teacher assistant and teaching to private companies.}
+    \cvline{\textbf{Interests}}{Reading, photography, travels.}
 
-\accademic{
-\ \\\ \\
-Torino, \today
-\flushright
-Davide VERNIZZI\hspace*{1cm}
-} % accademic
 
+
+
+\clearpage
+
+\recipient{~}{~} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear HelloSign,} % Opening greeting
+%\closing{I hope my profile fits your requirements, sincerely yours,} % Closing phrase
+\closing {~}
+\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+\justify
+
+I~think that paperwork is an unpleasant legacy that belongs to the past and that being capable of securely signing documents would greatly benefit many. When I~saw the software engineer position advertised on your website, I thought that it would be great if I had the opportunity to join you.
+
+My resume is enclosed for your review. Given my background in computer security and my skills, I think I would be an ideal match for this position, and, therefore, I would appreciate your consideration for this job opening.
+
+\textbf{[REQ] Experience: You’ve done web development for 5+ years with an MVC-type framework.}
+I have used MVC frameworks (mainly Yii, but I also had some experience with cakePhp and rails) for about six years. I started with a small side project while I was earning my PhD, and then, continued when I joined Ennova. Nowadays, I currently develop mainly using Yii.
+
+\textbf{[REQ] Team work: You’re used to working collaboratively, participating in code reviews, and being a team player.}
+I have always preferred team work to solo work. I have worked both in large (for Europe-wide research projects) and tiny (at Ennova and for small research and side projects) teams, and I have enjoyed pair programming with colleagues. At Ennova, I have also coordinated people as a team leader.
+Given my experience, I prefer to work in small and lean teams where meetings and conference calls are seldom used.
+
+\textbf{[REQ] Product-centric: You love solving hard technical challenges and producing clean code, but you realize the product and the end-user’s experience is the most important thing. You need to care about the users and think beyond just the technical challenges.}
+Like many developers, I love to write beautiful code. Reading \textit{Clean Code} by Robert Martin changed my mind and strongly pushed me towards TDD. I like the ability of continually refactoring my code that TDD gives me. I like when I read code months after I wrote it and it is still readable.
+
+Similar to reading clean code, buying my first Mac changed my mind on what an object should look like.
+I believe that, in order to create a great product every single detail should be taken into consideration.
+The entire production process must be planned in advance and things should not be expected to just happen by chance along the way.
+%is to consider every aspect, actually design it, and not let it just happen by chance.
+This is why, whenever I can, I prototype UI with paper or software (usually balsamiq and marvelApp), and I refine ideas and iterate, if possible, involving other people, especially the intended users.
+In this context, I like the possibility of making continuous updates to the web interface and using A/B testing in order to keep improving the user experience.
+
+\textbf{[REQ] Self-directed: We’re a startup. We need someone who is comfortable taking an imperfect feature specification and driving it all the way to completion.}
+I have strong startup experience, and I know what it means to work on draft ideas and complete them into a product. I have experience involving customers into the design process, working in their constrained environments, and adapting to their needs and requirements.
+
+I hope my profile fits your requirements, sincerely yours,
+
+\vspace{1.5em}
+
+\includegraphics[width=0.4\textwidth]{firmaPenna}
+\makeletterclosing % Print letter signature
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
