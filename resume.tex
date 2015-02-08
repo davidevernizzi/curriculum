@@ -1,0 +1,254 @@
+%%%
+%%% v0.1: sent to PCP
+%%%
+
+%\documentclass[a4paper]{moderncv}
+\documentclass[a4paper,sans,10pt]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% specifying options for CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{cvit}
+\newboolean{cvaccademic}
+\newboolean{cvfull}
+\newboolean{cvpoli}
+
+\setboolean{cvit}{false}
+\setboolean{cvaccademic}{false}
+\setboolean{cvfull}{false}
+\setboolean{cvpoli}{false}
+
+%\extendedversion{La versione estesa del CV \`e disponibile a \url{www.sli-m.com/vernizzi.pdf}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Misc includes and commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+
+%\usepackage[cm]{fullpage}
+\usepackage[margin=1.2in]{geometry}
+
+\usepackage[document]{ragged2e}
+
+\usepackage{datetime}
+
+\moderncvtheme[blue]{classic}
+%\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+%\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\newcommand{\structure}[1]{\color{sectiontitlecolor}\textbf{#1}\color{black}}
+
+\newcommand{\summary}{Summary}
+\newcommand{\education}{Education}
+\newcommand{\experience}{Experience}
+\newcommand{\teaching}{Teaching}
+\newcommand{\research}{Scientific Activity}
+\newcommand{\projects}{Research Projects}
+\newcommand{\languages}{Languages}
+\newcommand{\skills}{Computer Skills}
+\newcommand{\interests}{Interests and Activities}
+\newcommand{\publications}{Publications (Selection)}
+\newcommand{\misc}{Other Information}
+
+\newcommand{\italian}[2]{\ifthenelse{\boolean{cvit}}{#1}{#2}}
+\newcommand{\accademic}[1]{\ifthenelse{\boolean{cvaccademic}}{#1}{}}
+\newcommand{\work}[1]{\ifthenelse{\boolean{cvaccademic}}{}{#1}}
+\newcommand{\full}[1]{\ifthenelse{\boolean{cvfull}}{#1}{}}
+\newcommand{\short}[1]{\ifthenelse{\boolean{cvfull}}{}{#1}}
+\newcommand{\poli}[2]{\ifthenelse{\boolean{cvpoli}}{#1}{#2}}
+
+\newcommand{\otc}{Open\_TC}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for italian language
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\italian{
+    \usepackage[italian]{babel}
+
+    \renewcommand{\summary}{Competenze ed interessi}
+    \renewcommand{\education}{Formazione}
+    \renewcommand{\experience}{Esperienze di lavoro}
+    \renewcommand{\teaching}{Attivit\`a didattica}
+    \renewcommand{\research}{Attivit\`a scientifica}
+    \renewcommand{\projects}{Partecipazione a progetti di ricerca}
+    \renewcommand{\languages}{Lingue}
+    \renewcommand{\skills}{Competenze informatiche}
+    \renewcommand{\interests}{Interessi e attivit\`a}
+    \renewcommand{\refname}{Pubblicazioni (Selezione)}
+    \renewcommand{\misc}{Altre informazioni}
+}
+{
+    \renewcommand{\summary}{Summary}
+    \renewcommand{\education}{Education}
+    \renewcommand{\experience}{Work experience}
+    \renewcommand{\teaching}{Attivit\`a didattica}
+    \renewcommand{\research}{Attivit\`a scientifica}
+    \renewcommand{\projects}{Research projects}
+    \renewcommand{\languages}{Languages}
+    \renewcommand{\skills}{Skills}
+    \renewcommand{\interests}{Interessi e attivit\`a}
+    \renewcommand{\refname}{Pubblicazioni (Selezione)}
+    \renewcommand{\misc}{Languages and other information}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for work CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\work{
+    \nopagenumbers
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PERSONAL DATA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\firstname{Davide}
+\familyname{Vernizzi}
+\title{Full-stack engineer}
+\address{Via Belfiore, 42}{10125, Turin, Italy}
+\mobile{+39 329 2473 484}
+\email{davide.vernizzi@gmail.com}
+%\extrainfo{Date of birth: November 23, 1981}
+\extrainfo{Date of birth: November 23\textsuperscript{rd}, 1981}
+%\homepage{\url{www.vernizzis.it}}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Competenze ed interessi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-1.5em}  %%% Hack to fit in 1 page
+\justify
+Full-stack engineer with 8+ years of experience in web applications, CRM and enterprise systems.
+Earlier, I took a Ph.D. in computer security and worked as post-doc on security of cloud computing.
+I can work with teams and deal with managers. I love debugging and teaching. Native language Italian, fluent in English and French.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TECH SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\skills}
+\begin{description}
+\item [Front end] JavaScript, React/Flux, jQuery, HTML, CSS/Bootstrap
+\item [Back end] PHP/Yii framework, Ruby on Rails, Node.js, MySql, Java, Python
+\item [Dev ops] AWS stack, Vagrant, Linux, Bash
+\item [Etc] Git, TDD, BDD, Vim, LaTeX
+\end{description}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%% WORK EXPERIENCE
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{\experience}
+
+\renewcommand{\labelitemi}{\tiny$\blacksquare$}
+  % Inizio: 01/11/2011
+  \textbf{Senior software developer}\hfill\textbf{since 2011}\\
+  \textbf{Ennova Srl, \url{http://www.ennova.it}}\\
+\vspace{-1em}
+  \begin{itemize}
+  \item Managed a team of 5 people for the design and implementation of an utility mobile and web application for an energy provider.
+  The application integrates data from 5 different sources, has 6M+ contracts and 30M+ invoices.
+  I personally wrote the most critical parts.
+  \item Created an API that gets called 220K+ times per day with an average response time of 75 ms.
+  \item Contributed to the digitalization of many business process for telephone companies, resulting in a dramatic
+  increase of efficiency.
+  \item Helped to the redesign of the CRM solution for a major telephone company. We reduced the number of multiple calls by 30\%
+  and their duration by aggregating together all the previous tools that the CRM agents used.
+  \item Designed and keep up to date the cloud infrastructure used to provide services to clients.
+  \item Supervised new employees. Teach and enforce programming practices such as TDD, CI and CD.
+  \end{itemize}
+
+\vspace{0.5em}
+  \textbf{Research assistant}\hfill\textbf{2009 -- 2011}\\
+  \textbf{Politecnico di Torino, Computer Security Group}\\
+\vspace{-1em}
+  \begin{itemize}
+  \item Coordinated Politecnico di Torino participation in 3 European research projects.
+  \item Trained many students, ranging from undergrads to Ph.D. students.
+  \item Co-managed a team of 4 researcher in the TClouds research project% on behalf of the Politecnico di Torino.
+  \item Contributed to the concept of Trusted Channel and developed it, basing on OpenSSL.
+  \end{itemize}
+
+\vspace{0.5em}
+  \textbf{Consultant and teacher}\hfill\textbf{since 2003}\\
+\vspace{-1em}
+  \begin{itemize}
+  \item Freelance consultant in many different projects, including security, cryptographic libraries, mobile and web applications.
+  \item Co-wrote a cryptographic library which has been used for content protection.
+  \item Worked as teaching assistant and trained-on-the-job for many companies.
+  \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\education}
+  \textbf{Ph.D. in  Computer Science}\hfill\textbf{15 April 2010}\\
+  \textbf{Politecnico di Torino}\\
+%  \begin{itemize}
+%  \item Thesis: On Trusted and Privacy-Friendly Network Communications.
+%  \end{itemize}
+
+  %%% Laurea Poli - 04/05/2006
+  \textbf{M.Sc. in  Computer Engineering}\hfill\textbf{5 May 2006}\\
+  \textbf{Politecnico di Torino}\\
+%  \begin{itemize}
+%  \item Thesis: Self-adaptive parallel algorithms for computer vision applications.
+%  \end{itemize}
+
+  %%% Laurea ENSIMAG - 11/07/2005
+  \textbf{M.Sc. in  Computer Engineering}\hfill\textbf{5 May 2006}\\
+  \textbf{\'Ecole Nationale Sup\'erieure d'Informatique et des Math\'ematiques Appliqu\'ees de Grenoble}
+
+\end{document}
+
+
+\clearpage
+
+\recipient{~}{~} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear HelloSign,} % Opening greeting
+%\closing{I~hope my profile fits your requirements, sincerely yours,} % Closing phrase
+\closing {~}
+\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+\justify
+
+I~think paperwork is an unpleasant legacy that belongs to the past and being capable of securely signing documents would greatly benefit many. When I~saw the software engineer position advertised on your website, I~thought that it would be great if I~had the opportunity to join you.
+
+My resume is enclosed for your review. Given my background in computer security and my skills, I~think I~would be an ideal match for this position, and, therefore, I~would appreciate your consideration for this job opening.
+
+\textbf{[REQ] Experience: You’ve done web development for 5+ years with an MVC-type framework.}
+I~have used MVC frameworks (mainly Yes it is (Yii), but I~also had some experience with CakePhp and Rails) for about six years. I~started with a small side project while I~was earning my Ph.D, and then, continued when I~joined Ennova. Nowadays, I~currently develop mainly using Yii.
+
+\textbf{[REQ] Team work: You’re used to working collaboratively, participating in code reviews, and being a team player.}
+I~have always preferred team work to solo work. I~have worked both in large (for Europe-wide research projects) and tiny (at Ennova and for small research and side projects) teams, and I~have enjoyed pair programming with colleagues. At Ennova, I~have also coordinated people as a team leader.
+Given my experience, I~prefer to work in small and lean teams where meetings and conference calls are seldom used.
+
+\textbf{[REQ] Product-centric: You love solving hard technical challenges and producing clean code, but you realize the product and the end-user’s experience is the most important thing. You need to care about the users and think beyond just the technical challenges.}
+Like many developers, I~love to write beautiful code. Reading \textit{Clean Code} by Robert Martin changed my mind and strongly pushed me towards TDD. I~like the ability of continually refactoring my code that TDD gives me. I~like when I~read code months after I~wrote it and it is still readable.
+
+Similar to reading clean code, buying my first Mac changed my mind on what an object should look like.
+I~believe that, in order to create a great product every single detail should be taken into consideration.
+The entire production process must be planned in advance and things should not be expected to just happen by chance along the way.
+%is to consider every aspect, actually design it, and not let it just happen by chance.
+This is why, whenever I~can, I~prototype UI~with paper or software (usually balsamiq and marvelApp), and I~refine ideas and iterate, if possible, involving other people, especially the intended users.
+In this context, I~like the possibility of making continuous updates to the web interface and using A/B testing in order to keep improving the user experience.
+
+\textbf{[REQ] Self-directed: We’re a startup. We need someone who is comfortable taking an imperfect feature specification and driving it all the way to completion.}
+I~have strong startup experience, and I~know what it means to work on draft ideas and complete them into a product. I~have experience involving customers into the design process, working in their constrained environments, and adapting to their needs and requirements.
+
+I~hope my profile fits your requirements, sincerely yours,
+
+\vspace{1.5em}
+
+\includegraphics[width=0.4\textwidth]{FirmaPenna}
+\makeletterclosing % Print letter signature
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
