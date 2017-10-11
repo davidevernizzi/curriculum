@@ -19,6 +19,17 @@
 
 %\extendedversion{La versione estesa del CV \`e disponibile a \url{www.sli-m.com/vernizzi.pdf}}
 
+
+% TODO: fix personal blog
+% TODO: rivedere l’inglese lo devi rivedere con roby
+% TODO: quanto tempo è durata la migrazione.
+% TODO: quanti server gestisci.
+% TODO: quanta doc in più viene prodotta e con quale efficienza.
+% TODO: quanto è migliorata l’operatività dei qa.
+% TODO: numeri qasimodo
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Misc includes and commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,7 +122,7 @@
 \mobile{+39 329 2473 484}
 \email{davide.vernizzi@gmail.com}
 %\extrainfo{Date of birth: November 23, 1981}
-\homepage{www.vernizzis.it}{Personal blog: http://www.vernizzis.it}
+% \homepage{www.vernizzis.it}{Personal blog: http://www.vernizzis.it}
 \github{www.vernizzis.it}{github}
 \extrainfo{Date of birth: November 23\textsuperscript{rd}, 1981}
 
@@ -123,25 +134,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\vspace{-1.5em}  %%% Hack to fit in 1 page
 \justify
-Full-stack engineer with 10+ years of experience in web applications, CRM and enterprise systems.
-Earlier, I took a Ph.D. in computer security and worked as post-doc on security of cloud computing.
-I can work with teams, talk to customers and deal with managers. I love debugging and teaching. Native language Italian, fluent in English and French. Love reading, travelling and cooking.
-Father of two.
+Full-stack engineer with 10+ years of experience in web applications, CRM, and enterprise systems.
+Earlier, I obtained a Ph.D. in computer security and worked as post-doc on security of cloud computing.
+I can work with teams, talk to customers and deal with managers. I love debugging and teaching.
+Native language Italian, fluent in English and French. I love reading, traveling and cooking.
+% I am father of two.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% TECH SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\skills}
 \begin{description}
-\item [Front end] JavaScript, React/Flux, React Mobile, jQuery, ClojureScript, HTML, CSS/Bootstrap
-\item [Back end] Clojure, PHP, Javascript, Ruby on Rails, Node.js, MySql, Python, Java
-\item [Dev ops] AWS stack, Docker, Chef, Vagrant, Linux, Bash
-\item [Enterprise Systems] PEGA PRPC, Veeva, RabbitMQ
-\item [Etc] Git, TDD, BDD, Vim, \LaTeX, Jira
+\item [Front end] JavaScript, React/Flux, React Native, jQuery, ClojureScript, HTML, CSS/Bootstrap.
+\item [Back end] Clojure, PHP, Javascript, Ruby on Rails, Node.js, MySql, Python, Java.
+\item [Dev ops] AWS stack, Docker, Chef.io, Vagrant, Linux, Bash.
+\item [Enterprise Systems] PEGA PRPC, Veeva, RabbitMQ.
+\item [Etc] Git, TDD, BDD, Vim, \LaTeX, Issue trackers (Jira, Redmine).
 \end{description}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %%% WORK EXPERIENCE
+  %%% WORK EXPERIENCE 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{\experience}
 
@@ -153,23 +165,30 @@ Father of two.
 \vspace{-1em}
   \begin{itemize}
   \item Explored virtually any new technology of the company in the past two years.
-  I have pioneered the usage of Clojure, the microservice architecture, and Chef and Docker for DevOps.
+  I have pioneered the usage of Clojure, the microservice architecture, and Chef.io and Docker for DevOps.
   Moreover I have investigated enterprise tools like PEGA PRPC and Veeva.
   \item Together with another senior engineer, I have applied such technologies to redesign the company's main project,
-  by splitting it in microservices written in Clojure that communicate using an event bus based on RabbitMQ.
-  The system which was once made of a single Java application is now composed by 9 Clojure microservices.
+  a custom CRM built for one of the major healthcare insurance companies in the USA.
+  This porting, which required to split the legacy code into microservices written in Clojure
+  that communicate using an event bus based on RabbitMQ, took 2 months and laid the basis for all the successive developments.
+  The system which was once made of a single Java application is now composed by
+  9 Clojure microservices, 2 legacy Java services and one Javascript frontend.
   As a result the application is now easier to maintain and develop.
   \item To better handle the development process of this application, I have contributed to the design of the internal
-  continuous integration/continuous deploy workflow. This flow is now completely based on JenkinsCI jobs and requires
-  no manual intervention.
+  continuous integration/continuous deploy workflow. This flow is now composed of more than 15 JenkinsCI jobs and requires
+  no manual intervention. After being applied in the first project, the same concept has successfully been applied to
+  all the other projects of the company.
   \item Have led the migration from our existing cloud service provider to a new one. Twice.
-  For the last migration, I have redesigned development and deployment architecture using Chef.io.
-  The resulting system is defined by a common configuration shared among all the environment, including developmen, QA, staging and production.
+  For the last migration, I have refactored our architecture using Chef.io.
+  The resulting system is defined by a common configuration shared among all the environments, including development, QA, staging and production.
   \item Personally handled the deployment in production of our largest application, defining the procedures and implementing scripts to automate them.
-  Moreover, I am currently taking care of the maintenance of the production servers.
+  Moreover, I am currently taking care of the maintenance of 13 production servers and 5 QA servers.
   \item I actively am contributing to our new projects by helping to write the documentation and the proposals,
   and by contributing to the initial design of the technical solution.
-  \item Written an internal tool that streamlined the QA operation of the company. The tool is now used by the whole QA team on daily basis.
+  % I recently have contributed to define the technical architecture for a proposal worth around 1 milion dollars.
+  \item Designed and written an internal tool that streamlined the QA operation of the company.
+  The tool is now used by 4 QA engineers on daily basis and has been employed to run more than XXX test scenarios
+  during the past two years.
   \end{itemize}
 
 
